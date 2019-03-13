@@ -5,7 +5,7 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 10001,
             "PassKey": "ManagePlatform",
-   "Mac": 2014a457963
+            "Mac": 2014a457963
         }
     }
 }
@@ -44,7 +44,7 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 20011,
             "PassKey": "ManagePlatform",
-"Timestamp": 1234567890
+            "Timestamp": 1234567890
         },
         "MsgBody": { 
         "ClassID": [
@@ -178,10 +178,10 @@ AI服务器发送：
             "Timestamp": 1234567890
         },
          "MsgBody": {
-                "StuID":[ 
-		      2110, 
-	              2111
-                ]
+            "StuID":[ 
+		 2110, 
+	         2111
+            ]
         }        
     }
 }	
@@ -208,10 +208,10 @@ AI服务器发送：
             "Timestamp": 1234567890
         },
         "MsgBody": {
-            "ImageID": [
-	          210010,
-	          120001
-          ]
+            "ImageID":[
+	         210010,
+	         120001
+             ]
         }
     }
 }
@@ -235,7 +235,7 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 10004,
             "PassKey": "ManagePlatform",
-       "Timestamp": 1234567890
+            "Timestamp": 1234567890
         }
     }
 }
