@@ -108,25 +108,71 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 20013,
             "PassKey": "ManagePlatform",
-   "Timestamp": 1234567890
+            "Timestamp": 1234567890
         },
         "MsgBody": [
-        {
-	    "ClassID":111,
-            "StuID": 200,
-	    "Image": [
-	        {	    
-            	   "ImageID": 210010,
-            	   "url": "http://123456.jpg"
-	        }
-	    ]
-        },
-        {
-	    "ClassID":112,
-            "StuID": 201,
-            "ImageID": 210011,
-            "url": "http://123456.jpg"
-        }
+            {
+                "ClassID": 111,
+                "Stu": [
+                    {
+                        "StuID": 200,
+                        "Image": [
+                            {
+                                "ImageID": 210010,
+                                "url": "http://123457.jpg"
+                            },
+                            {
+                                "ImageID": 210012,
+                                "url": "http://123456.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "StuID": 200,
+                        "Image": [
+                            {
+                                "ImageID": 210010,
+                                "url": "http://123457.jpg"
+                            },
+                            {
+                                "ImageID": 210012,
+                                "url": "http://123456.jpg"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ClassID": 112,
+                "Stu": [
+                    {
+                        "StuID": 201,
+                        "Image": [
+                            {
+                                "ImageID": 210010,
+                                "url": "http://123457.jpg"
+                            },
+                            {
+                                "ImageID": 210012,
+                                "url": "http://123456.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "StuID": 202,
+                        "Image": [
+                            {
+                                "ImageID": 210010,
+                                "url": "http://123457.jpg"
+                            },
+                            {
+                                "ImageID": 210012,
+                                "url": "http://123456.jpg"
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
     }
 }
