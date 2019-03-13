@@ -114,8 +114,12 @@ AI服务器发送：
         {
 	    "ClassID":111,
             "StuID": 200,
-            "ImageID": 210010,
-            "url": "http://123456.jpg"
+	    "Image": [
+	        {	    
+            	   "ImageID": 210010,
+            	   "url": "http://123456.jpg"
+	        }
+	    ]
         },
         {
 	    "ClassID":112,
