@@ -112,11 +112,13 @@ AI服务器发送：
         },
         "MsgBody": [
         {
+	    "ClassID":111,
             "StuID": 200,
             "ImageID": 210010,
             "url": "http://123456.jpg"
         },
         {
+	    "ClassID":112,
             "StuID": 201,
             "ImageID": 210011,
             "url": "http://123456.jpg"
