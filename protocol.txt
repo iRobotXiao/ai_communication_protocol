@@ -227,12 +227,16 @@ AI服务器发送：
             "PassKey": "ManagePlatform",
             "Timestamp": 1234567890
         },
-         "MsgBody": {
-            "StuID":[ 
-		 2110, 
-	         2111
-            ]
-        }        
+         "MsgBody": [
+            {
+                "StuID": 2110,
+                "ClassID":115478
+            },
+            {
+                "StuID": 2111,
+                "ClassID":2156487
+            }  
+	]
     }
 }	
 回应报文：
@@ -257,12 +261,18 @@ AI服务器发送：
             "PassKey": "ManagePlatform",
             "Timestamp": 1234567890
         },
-        "MsgBody": {
-            "ImageID":[
-	         210010,
-	         120001
-             ]
-        }
+        "MsgBody": [
+            {
+                "ClassID": 121313,
+                "StuID": 1546654,
+                "ImageID": 210010
+            },
+            {
+                "ClassID": 121313,
+                "StuID": 1546654,
+                "ImageID": 210010
+            }
+        ]
     }
 }
 回应报文：
