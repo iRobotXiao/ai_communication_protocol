@@ -1,0 +1,411 @@
+1.心跳(10001)
+AI服务器发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 10001,
+            "PassKey": "ManagePlatform",
+   "Mac": 2014a457963
+        }
+    }
+}
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 10001,
+            "PassKey": "ManagePlatform"
+        }
+    }
+}
+2.同步状态更新(10003)
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 10003,
+            "PassKey": "ManagePlatform"
+        }
+    }
+}
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 10003,
+            "PassKey": "ManagePlatform"
+        }
+    }
+}
+3.增班级信息
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20011,
+            "PassKey": "ManagePlatform",
+"Timestamp": 1234567890
+        },
+        "MsgBody": { 
+        "ClassID": [
+             110,
+             111
+            ]
+        }
+    }
+}
+回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20011,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
+4.增学生信息
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20012,
+            "PassKey": "ManagePlatform",
+            "Timestamp": 1234567890
+        },
+        "MsgBody": [
+            {
+                "StuID": 2110,
+                "ClassID":115478
+            },
+            {
+                "StuID": 2111,
+                "ClassID":2156487
+            }
+        ]
+    }
+}	
+回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20012,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
+5.增学生人脸
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20013,
+            "PassKey": "ManagePlatform",
+   "Timestamp": 1234567890
+        },
+        "MsgBody": [
+        {
+            "StuID": 200,
+            "ImageID": 210010,
+            "url": "http://123456.jpg"
+        },
+        {
+            "StuID": 201,
+            "ImageID": 210011,
+            "url": "http://123456.jpg"
+        }
+        ]
+    }
+}
+回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20013,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
+6.删班级信息
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20021,
+            "PassKey": "ManagePlatform",
+            "Timestamp": 1234567890
+        },
+        "MsgBody": {
+            "ClassID": [
+              110,
+              200
+        ]
+    }
+}
+回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20021,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
+7.删学生信息
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20022,
+            "PassKey": "ManagePlatform",
+            "Timestamp": 1234567890
+        },
+         "MsgBody": {
+                "StuID":[ 
+		            2110, 
+	              2111
+                ]
+        }        
+    }
+}	
+回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20022,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
+8.删学生人脸图片
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20023,
+            "PassKey": "ManagePlatform",
+            "Timestamp": 1234567890
+        },
+        "MsgBody": {
+            "ImageID": [
+	          210010,
+	          120001
+          ]
+        }
+    }
+}
+回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20023,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
+9.数据同步结束
+AI服务器发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 10004,
+            "PassKey": "ManagePlatform",
+       "Timestamp": 1234567890
+        }
+    }
+}
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 10004,
+            "PassKey": "ManagePlatform"
+        }
+    }
+}
+10.发送课堂分析报告
+AI服务器发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 30001,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "LessonID": 12306,
+            "BehaviorRecord": {
+             "Tch": {
+                    "Moving": 50.77,
+                    "StandOn": 40.8,
+                    "DownPlatform": 8.43,
+                    "BlackBoard": 0
+                },
+                 "Stu": {
+                    "Listening": 20,
+                    "ReadWrite": 30,
+                    "RaiseHand": 20,
+                    "Interaction": 30
+                },
+                 "Conclusion": "该课程老师授课热情有余，学生上课反馈不足",
+                "Suggest": "老师在上课时要注意学生的上课状态，并进行适当地引导"
+            },
+            "LessonModel": {
+                "Rt": 63.29,
+                "Ch": 26.58,
+                "StuRate": 36.71,
+                "ModelType": 2,
+                "ST_Value": [
+                    20,
+                    68,
+                    68,
+                    68,
+                    68,
+                    153,
+                    153,
+                    183,
+                    183,
+                    183,
+                    185
+                ],
+                 "Conclusion": "该课程属于混合型教学模式，学生行为占有率为36.71",
+                "Suggest": "老师在上课时要注意学生的上课状态，并进行适当地引导"
+            },
+            "StuAvailableScore": {
+                "AvgJoinDegree": [
+                54,
+                    56,
+                    59,
+                    61,
+                    62,
+                    63,
+                    65,
+                    66,
+                    64,
+                    62,
+                    60,
+                    60,
+                    58,
+                    55,
+                    58,
+                    56,
+                    59,
+                    60,
+                    64,
+                    68
+                ],
+                "Timestamp": [
+                    2,
+                    4,
+                    6,
+                    8,
+                    10,
+                    12,
+                    14,
+                    16,
+                    18,
+                    20,
+                    22,
+                    24,
+                    26,
+                    28,
+                    30,
+                    32,
+                    34,
+                    36,
+                    38,
+                    40
+                ],
+                "DetailedScore": [
+                    {
+                        "StuID": 201812300318,
+                        "AvgScore": 55,
+                        "JoinDegree": [
+                            39,
+                            43,
+                            45,
+                            59,
+                            68,
+                            74,
+                            75,
+                            78,
+                            77,
+                            76,
+                            78,
+                            80,
+                            82,
+                            84,
+                            80,
+                            78,
+                            77,
+                            78,
+                            78,
+                            79
+                        ]
+                    },
+                    {
+                        "StuID": 201812300528,
+                        "AvgScore": 60,
+                        "JoinDegree": [
+                            40,
+                            56,
+                            60,
+                            66,
+                            68,
+                            69,
+                            68,
+                            70,
+                            72,
+                            70,
+                            66,
+                            70,
+                            67,
+                            68,
+                            64,
+                            66,
+                            64,
+                            70,
+                            74,
+                            80
+                             ]
+                    }
+                ]
+            }
+        }
+    }
+}
+回应报文:
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 30001,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
