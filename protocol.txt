@@ -295,7 +295,8 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 10004,
             "PassKey": "ManagePlatform",
-            "Timestamp": 1234567890
+            "Timestamp": 1234567890,
+	    "Mac": 12346ba7f86
         }
     }
 }
