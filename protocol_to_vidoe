@@ -97,7 +97,7 @@
         }
     }
 }
-5.发送老师全景图像
+5.发送老师全景图像(30002)
  录播主机发送：
  {
     "RequestMsg": {
@@ -110,4 +110,18 @@
  		   “Width”:480,
        “Height”:270
   }
+}
+发送图片缓冲
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 30002,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            "Result": 200, //200 成功　400 失败
+            "StrErrorMsg": "Failed"//错误信息
+        }
+}
 }
