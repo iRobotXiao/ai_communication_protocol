@@ -1,0 +1,113 @@
+1.心跳(10001)
+录播主机发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 10001,
+            "PassKey": "AIServer"
+        }
+    }
+}
+返回回应报文:
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 10001,
+            "PassKey": "AIServer"
+        }
+    }
+}
+2.AI识别请求开始(20001)
+录播主机发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20001,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            "ClassID":20100704, 
+            "LessonID": 20190307
+     }
+}
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20001,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            "Result": 200, //200 成功　400 失败
+            "StrErrorMsg": "Failed"//错误信息
+        }
+    }
+}
+3.AI识别停止(20002)
+ 录播主机发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20002,
+            "PassKey": "AIServer"
+        },
+ "MsgBody": {
+            "ClassID":20100704, 
+            "LessonID": 20190307
+     }
+}
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20002,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            "Result": 200, //200 成功　400 失败
+            "StrErrorMsg": "Failed"//错误信息
+        }
+    }
+}
+4.发送学生全景图像(30001)
+录播主机发送
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode":30001,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            “Channels”:3,
+ 		   “Width”:1920,
+   “Height”:1080
+}
+}
+发送图片缓冲
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 30001,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            "Result": 200, //200 成功　400 失败
+            "StrErrorMsg": "Failed"//错误信息
+        }
+    }
+}
+5.发送老师全景图像
+ 录播主机发送：
+ {
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode":30002,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            “Channels”:3,
+ 		   “Width”:480,
+       “Height”:270
+  }
+}
