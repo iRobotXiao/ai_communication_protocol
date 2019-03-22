@@ -81,7 +81,9 @@
         "MsgBody": {
            "StuJpegSize":1000,
            "TchJpegSize":1000,
-           "TimeStamp":154679871
+           "TimeStamp":154679871,
+           "LessonID":10001,
+           "ClassID":20010
   }
 }
 以学生、教师为顺序，同时发送两张jpeg图片缓冲
