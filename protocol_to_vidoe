@@ -125,3 +125,30 @@
         }
 }
 }
+6.以jpeg格式同时发送学生和老师图片(30003)
+录播主机发送：
+ {
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode":30003,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+           "StuJpegSize":1000,
+           "TchJpegSize":1000
+  }
+}
+同时发送两张jpeg图片缓冲
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 30003,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            "Result": 200, //200 成功　400 失败
+            "StrErrorMsg": "Failed"//错误信息
+        }
+}
+}
