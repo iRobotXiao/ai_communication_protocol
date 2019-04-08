@@ -26,8 +26,7 @@
             "PassKey": "AIServer"
         },
         "MsgBody": {
-            "ClassID":20100704, 
-            "LessonID": 20190307
+            "ValidMsg":"{"class_id":111,"lesson_id":222}"
      }
 }
 返回回应报文：
@@ -52,8 +51,7 @@
             "PassKey": "AIServer"
         },
  "MsgBody": {
-            "ClassID":20100704, 
-            "LessonID": 20190307
+             "ValidMsg":"{"class_id":111,"lesson_id":222}"
      }
 }
 返回回应报文：
@@ -82,8 +80,7 @@
            "StuJpegSize":1000,
            "TchJpegSize":1000,
            "TimeStamp":154679871,
-           "LessonID":10001,
-           "ClassID":20010
+           "ValidMsg":"{"class_id":111,"lesson_id":222}"
   }
 }
 以学生、教师为顺序，同时发送两张jpeg图片缓冲
