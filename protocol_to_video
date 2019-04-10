@@ -3,7 +3,7 @@
 {
     "RequestMsg": {
         "MsgHead": {
-            "MsgCode": 10001,
+            "MsgCode": 30032,
             "PassKey": "AIServer"
         }
     }
@@ -12,7 +12,7 @@
 {
     "RequestMsg": {
         "MsgHead": {
-            "MsgCode": 10001,
+            "MsgCode": 30032,
             "PassKey": "AIServer"
         }
     }
