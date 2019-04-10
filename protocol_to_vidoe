@@ -68,7 +68,7 @@
     }
 }
 
-4.以jpeg格式同时发送学生和老师图片(30003)
+4.发送课程信息(30003)，在发送完老师学生数据流后会发送该命令，通知ai服务器该处理了
 录播主机发送：
  {
     "RequestMsg": {
@@ -77,13 +77,11 @@
             "PassKey": "AIServer"
         },
         "MsgBody": {
-           "StuJpegSize":1000,
-           "TchJpegSize":1000,
-           "TimeStamp":154679871,
+           "TimeStamp":154679871,//录制多长时间了
            "ValidMsg":"{"class_id":111,"lesson_id":222}"
   }
 }
-以学生、教师为顺序，同时发送两张jpeg图片缓冲
+
 返回回应报文：
 {
     "RequestMsg": {
@@ -96,4 +94,44 @@
             "StrErrorMsg": "Failed"//错误信息
         }
 }
+4.发送课程信息(30004)
+录播主机发送：
+ {
+    老师图像内容H264
+  }
+}
+
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 30004,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            "Result": 200, //200 成功　400 失败
+            "StrErrorMsg": "Failed"//错误信息
+        }
+}
+
+4.发送课程信息(30005)
+录播主机发送：
+ {
+    学生图像内容H264
+  }
+}
+
+返回回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 30005,
+            "PassKey": "AIServer"
+        },
+        "MsgBody": {
+            "Result": 200, //200 成功　400 失败
+            "StrErrorMsg": "Failed"//错误信息
+        }
+}
+
 }
