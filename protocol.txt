@@ -16,11 +16,7 @@ AI服务器发送：
     "RequestMsg": {
         "MsgHead": {
             "MsgCode": 10001,
-            "PassKey": "ManagePlatform",
-	    "WorkFlag":1,
-	    "LessonID":11111,
-	    "ClassID":22222,
-	    "IP":"172.16.8.100"
+            "PassKey": "ManagePlatform"
         }
     }
 }
