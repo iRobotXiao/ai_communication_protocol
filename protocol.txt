@@ -5,7 +5,9 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 10001,
             "PassKey": "ManagePlatform",
-            "Mac": 2014a457963
+            "Mac": 2014a457963，
+	    "IP": "172.16.8.215",
+	    "Port"：2002
         }
     }
 }
