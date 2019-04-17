@@ -26,7 +26,7 @@
             "PassKey": "AIServer"
         },
         "MsgBody": {
-            "ValidMsg":"{"class_id":111,"lesson_id":222}"
+            "ValidMsg":"111,222"
      }
 }
 返回回应报文：
@@ -51,7 +51,7 @@
             "PassKey": "AIServer"
         },
  "MsgBody": {
-             "ValidMsg":"{"class_id":111,"lesson_id":222}"
+             "ValidMsg":"111,222"
      }
 }
 返回回应报文：
@@ -118,7 +118,7 @@
         },
         "MsgBody": {
            "TimeStamp":154679871,//录制多长时间了,单位为s
-           "ValidMsg":"{"class_id":111,"lesson_id":222}"
+           "ValidMsg":"111,222"
   }
 }
 
