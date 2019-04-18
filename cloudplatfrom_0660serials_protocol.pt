@@ -1,1 +1,24 @@
 
+补充协议：录播主机向平台 请求 当前课程直播信息 协议（Recorder -> Server）
+<?xml version="1.0" encoding="UTF-8"?>
+<ResponseMsg> //回复
+<MsgHead>
+  <MsgCode>30040</MsgCode> //消息code
+<PassKey>ManagePlatform</PassKey> //消息来源：ManagePlatform
+<SignCode> 11_ESAM94L0RB </ SignCode >
+</MsgHead>
+  </ResponseMsg>
+返回回应报文(平台返回)
+<?xml version="1.0" encoding="UTF-8"?>
+<RequestMsg>
+<MsgHead>
+<MsgCode>30040</MsgCode>
+<PassKey>ManagePlatform</PassKey>
+</MsgHead>
+<MsgBody>
+<RecType>1</RecType> //（1—开始发送截图给AI服务器，0-停止发送，直播结束了）
+<RecInfo>172.16.10.216,8080,60 </RecInfo>( 英文逗号分隔，分别代表：AI服务器地址、AI服务器端口、截图发送频率<秒>)
+<RecParam> 58,21</RecParam >（逗号分隔的直播信息的参数，可任意增加：比方说班级ID，课程ID等等 此参数录制结束必须写回）
+<AiFlag> 1 </ AiFlag >(1表示需要AI识别，0表示不需要识别)
+</MsgBody>
+</RequestMsg>
