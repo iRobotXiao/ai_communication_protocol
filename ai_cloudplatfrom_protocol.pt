@@ -20,25 +20,7 @@ AI服务器发送：
         }
     }
 }
-2.查询数据是否已经同步(10003)
-平台发送：
-{
-    "RequestMsg": {
-        "MsgHead": {
-            "MsgCode": 10003,
-            "PassKey": "ManagePlatform"
-        }
-    }
-}
-返回回应报文：
-{
-    "RequestMsg": {
-        "MsgHead": {
-            "MsgCode": 10003,
-            "PassKey": "ManagePlatform"
-        }
-    }
-}
+
 3.增班级信息(20011)
 平台发送：
 {
@@ -290,27 +272,7 @@ AI服务器发送：
         }
     }
 }
-9.通知数据同步完毕(10004)
-AI服务器发送：
-{
-    "RequestMsg": {
-        "MsgHead": {
-            "MsgCode": 10004,
-            "PassKey": "ManagePlatform",
-            "Timestamp": 1234567890,
-	    "Mac": 12346ba7f86
-        }
-    }
-}
-返回回应报文：
-{
-    "RequestMsg": {
-        "MsgHead": {
-            "MsgCode": 10004,
-            "PassKey": "ManagePlatform"
-        }
-    }
-}
+
 10.发送课堂分析报告(30001)
 AI服务器发送：
 {
