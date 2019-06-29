@@ -58,7 +58,6 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 20012,
             "PassKey": "ManagePlatform",
-            "Timestamp": 1234567890
         },
         "MsgBody": [
             {
@@ -92,7 +91,6 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 20013,
             "PassKey": "ManagePlatform",
-            "Timestamp": 1234567890
         },
         "MsgBody": [
             {
@@ -180,7 +178,6 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 20021,
             "PassKey": "ManagePlatform",
-            "Timestamp": 1234567890
         },
         "MsgBody": {
             "ClassID": [
@@ -209,7 +206,6 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 20022,
             "PassKey": "ManagePlatform",
-            "Timestamp": 1234567890
         },
          "MsgBody": [
             {
@@ -243,7 +239,6 @@ AI服务器发送：
         "MsgHead": {
             "MsgCode": 20023,
             "PassKey": "ManagePlatform",
-            "Timestamp": 1234567890
         },
         "MsgBody": [
             {
@@ -272,8 +267,62 @@ AI服务器发送：
         }
     }
 }
-
-10.发送课堂分析报告(30001)
+10.学生换班级
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20024,
+            "PassKey": "ManagePlatform",
+        },
+        "MsgBody": [
+            "FromClassID": 121313,
+            "StuID": 1546654,
+            "ToClassD": 123456
+        ]
+    }
+}
+回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20024,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
+11.班级互换
+平台发送：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20025,
+            "PassKey": "ManagePlatform",
+        },
+        "MsgBody": [
+            "ClassID_1": 121313,
+            "ClassID_2": 123456
+        ]
+    }
+}
+回应报文：
+{
+    "RequestMsg": {
+        "MsgHead": {
+            "MsgCode": 20025,
+            "PassKey": "ManagePlatform"
+        },
+        "MsgBody": {
+            "Result": 200,
+            "StrErrorMsg": "Failed"
+        }
+    }
+}
+12.发送课堂分析报告(30001)
 AI服务器发送：
 {
     "RequestMsg": {
